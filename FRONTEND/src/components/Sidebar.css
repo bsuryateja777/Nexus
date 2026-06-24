@@ -1,0 +1,254 @@
+@reference "tailwindcss";
+
+.sidebar {
+  @apply flex flex-col h-full border-r w-64 transition-all duration-300 relative;
+  background-color: var(--bg);
+  border-color: var(--border);
+  overflow: visible;
+}
+
+.sidebar.collapsed {
+  @apply w-20 items-center;
+}
+
+/* Header */
+.sidebar-header {
+  @apply flex items-center gap-2 px-2 py-3 border-b;
+  border-color: var(--border);
+}
+
+.sidebar.collapsed .sidebar-header {
+  @apply flex-col gap-1 px-2 py-2;
+}
+
+.sidebar-toggle {
+  @apply flex items-center justify-center w-10 h-10 rounded-lg transition-colors text-xl font-bold;
+  background-color: var(--code-bg);
+  color: var(--text);
+}
+
+.sidebar-toggle:hover {
+  opacity: 0.8;
+}
+
+/* Logo */
+.sidebar-logo {
+  @apply flex items-center justify-center flex-1;
+}
+
+.sidebar-logo h2 {
+  @apply text-lg font-bold tracking-widest;
+  color: var(--text-h);
+  font-family: 'Geist', 'Inter', system-ui, sans-serif;
+  letter-spacing: 0.15em;
+}
+
+.sidebar-logo-collapsed {
+  @apply flex items-center justify-center w-10 h-10 rounded-lg font-bold text-lg;
+  background-color: var(--code-bg);
+  color: var(--text-h);
+}
+
+/* New Chat Button */
+.sidebar-new-chat {
+  @apply p-3 border-b;
+  border-color: var(--border);
+}
+
+.new-chat-btn {
+  @apply w-full flex items-center justify-center gap-3 px-4 py-2 rounded-lg font-medium transition-colors;
+  background-color: var(--code-bg);
+  color: var(--text-h);
+}
+
+.new-chat-btn:hover {
+  opacity: 0.8;
+}
+
+.sidebar.collapsed .new-chat-btn {
+  @apply w-10 h-10 p-0;
+}
+
+.btn-icon {
+  @apply text-lg;
+}
+
+.sidebar.collapsed .new-chat-btn span:not(.btn-icon) {
+  @apply hidden;
+}
+
+/* Search */
+.sidebar-search {
+  @apply p-3 border-b;
+  border-color: var(--border);
+}
+
+.sidebar.collapsed .sidebar-search {
+  @apply p-2 border-b-0;
+}
+
+.search-input {
+  @apply w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-1 transition-colors text-sm;
+  background-color: var(--code-bg);
+  color: var(--text);
+  border-color: var(--border);
+}
+
+.search-input:focus {
+  border-color: var(--accent);
+}
+
+.search-input::placeholder {
+  color: var(--text);
+  opacity: 0.6;
+}
+
+.search-icon-button {
+  @apply flex items-center justify-center w-10 h-10 p-0 rounded-lg transition-colors text-lg mx-auto my-3;
+  background-color: var(--code-bg);
+  color: var(--text);
+  filter: grayscale(100%);
+}
+
+.search-icon-button:hover {
+  opacity: 0.8;
+}
+
+/* Content Area */
+.sidebar-content {
+  @apply flex-1 overflow-y-auto;
+}
+
+.sidebar-section {
+  @apply px-2 py-2;
+}
+
+.sidebar-section-header {
+  @apply px-3 py-2 flex items-center justify-between;
+}
+
+.sidebar-section-header-content {
+  @apply flex items-center justify-between w-full gap-2;
+}
+
+.sidebar-section-title {
+  @apply text-xs font-semibold uppercase tracking-wider;
+  color: var(--text);
+  opacity: 0.7;
+}
+
+.delete-all-btn {
+  @apply px-2 py-1 rounded text-xs font-semibold transition-colors;
+  background-color: var(--code-bg);
+  color: #ef4444;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.delete-all-btn:hover {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+.sidebar-section-content {
+  @apply space-y-1;
+}
+
+.sidebar-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar-content::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+.sidebar-content::-webkit-scrollbar-thumb:hover {
+  opacity: 0.8;
+}
+
+/* Search Results */
+.sidebar-search-results {
+  @apply p-3 space-y-1;
+}
+
+.sidebar-search-item {
+  @apply block w-full px-3 py-2 rounded-lg text-sm transition-colors text-left truncate;
+  color: var(--text);
+}
+
+.sidebar-search-item:hover {
+  background-color: var(--code-bg);
+}
+
+.sidebar-search-item.active {
+  background-color: var(--code-bg);
+  color: var(--text-h);
+}
+
+/* No Results */
+.sidebar-no-results {
+  @apply px-3 py-4 text-center text-sm;
+  color: var(--text);
+  opacity: 0.6;
+}
+
+/* Footer */
+.sidebar-footer {
+  @apply border-t p-3 sticky bottom-0;
+  border-color: var(--border);
+  background-color: var(--bg);
+}
+
+/* Delete Confirmation Modal */
+.delete-confirm-overlay {
+  @apply fixed inset-0 flex items-center justify-center z-50;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.delete-confirm-modal {
+  @apply bg-white rounded-lg shadow-lg p-6 max-w-sm w-full mx-4;
+  background-color: var(--bg);
+}
+
+.delete-confirm-modal h3 {
+  @apply text-lg font-bold mb-3;
+  color: var(--text-h);
+}
+
+.delete-confirm-modal p {
+  @apply text-sm mb-6;
+  color: var(--text);
+  opacity: 0.8;
+}
+
+.delete-confirm-buttons {
+  @apply flex gap-3;
+}
+
+.delete-confirm-cancel {
+  @apply flex-1 px-4 py-2 rounded-lg font-medium transition-colors;
+  background-color: var(--code-bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  cursor: pointer;
+}
+
+.delete-confirm-cancel:hover {
+  opacity: 0.8;
+}
+
+.delete-confirm-delete {
+  @apply flex-1 px-4 py-2 rounded-lg font-medium transition-colors text-white;
+  background-color: #ef4444;
+  cursor: pointer;
+}
+
+.delete-confirm-delete:hover {
+  background-color: #dc2626;
+}

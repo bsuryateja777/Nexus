@@ -1,0 +1,46 @@
+@reference "tailwindcss";
+
+.sidebar-section {
+  @apply px-3 py-4;
+}
+
+.sidebar-section-header {
+  @apply flex items-center justify-between px-2 mb-3 cursor-pointer hover:text-gray-200 transition-colors;
+}
+
+.sidebar-section-title {
+  @apply text-xs uppercase font-semibold text-gray-400 tracking-wider;
+}
+
+.sidebar-section-toggle {
+  @apply text-gray-500 text-sm;
+}
+
+.sidebar-section-content {
+  @apply space-y-2 max-h-96 overflow-y-auto;
+}
+
+.sidebar-section-item {
+  @apply px-3 py-2 rounded-lg text-sm text-gray-300 hover:bg-gray-800 cursor-pointer transition-colors truncate;
+}
+
+.sidebar-section-item:hover {
+  @apply text-white;
+}
+
+.sidebar-section::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar-section::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar-section::-webkit-scrollbar-thumb {
+  background: #404854;
+  border-radius: 3px;
+}
+
+.sidebar-section::-webkit-scrollbar-thumb:hover {
+  background: #555e6b;
+}

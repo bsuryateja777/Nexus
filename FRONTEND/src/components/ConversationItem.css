@@ -1,0 +1,88 @@
+@reference "tailwindcss";
+
+.conversation-item {
+  @apply flex items-center justify-between px-3 py-2 rounded-lg transition-colors text-sm cursor-pointer;
+  color: var(--text);
+}
+
+.conversation-item:hover {
+  background-color: var(--code-bg);
+}
+
+.conversation-item.active {
+  background-color: var(--code-bg);
+  color: var(--text-h);
+}
+
+.conversation-title {
+  @apply truncate flex-1;
+}
+
+.conversation-preview {
+  @apply text-xs truncate;
+  color: var(--text);
+  opacity: 0.6;
+}
+
+.conversation-menu-wrapper {
+  @apply relative ml-2 flex-shrink-0;
+}
+
+.conversation-item:hover .conversation-menu-button {
+  opacity: 1;
+}
+
+.conversation-menu-button {
+  @apply text-lg cursor-pointer px-2 py-1 rounded transition-colors;
+  background: transparent;
+  border: none;
+  color: var(--text);
+  opacity: 0;
+}
+
+.conversation-menu-button:hover {
+  background-color: var(--code-bg);
+  color: var(--text-h);
+}
+
+.conversation-menu {
+  @apply absolute right-0 mt-1 w-48 rounded-lg shadow-lg py-2 z-50;
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+}
+
+.conversation-menu-item {
+  @apply block w-full text-left px-4 py-2 transition-colors text-sm;
+  background: none;
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.conversation-menu-item:hover {
+  background-color: var(--code-bg);
+}
+
+.conversation-menu-divider {
+  @apply border-t my-1;
+  border-color: var(--border);
+}
+
+.conversation-menu-delete {
+  color: #ef4444;
+}
+
+.conversation-menu-delete:hover {
+  background-color: rgba(239, 68, 68, 0.1);
+}
+
+.rename-input {
+  @apply w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-1 transition-colors text-sm;
+  background-color: var(--code-bg);
+  color: var(--text);
+  border-color: var(--border);
+}
+
+.rename-input:focus {
+  border-color: var(--accent);
+}

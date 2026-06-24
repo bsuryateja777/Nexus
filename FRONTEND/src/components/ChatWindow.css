@@ -1,0 +1,23 @@
+@reference "tailwindcss";
+
+.chat-window {
+  @apply flex-1 overflow-y-auto p-6 flex flex-col gap-4;
+  background-color: var(--bg);
+}
+
+.chat-window::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chat-window::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.chat-window::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+.chat-window::-webkit-scrollbar-thumb:hover {
+  opacity: 0.8;
+}

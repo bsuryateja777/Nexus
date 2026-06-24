@@ -1,0 +1,91 @@
+@reference "tailwindcss";
+
+.chat-input-container {
+  @apply border-t p-4;
+  background-color: var(--bg);
+  border-color: var(--border);
+}
+
+.chat-input-form {
+  @apply max-w-3xl mx-auto;
+}
+
+.chat-input-wrapper {
+  @apply flex gap-2 items-end;
+}
+
+.skill-button {
+  @apply flex items-center justify-center transition-colors cursor-pointer;
+  min-width: 44px;
+  height: 44px;
+  background-color: var(--code-bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 14px;
+  padding: 0 8px;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.skill-button:hover {
+  background-color: var(--border);
+}
+
+.skill-button:active {
+  background-color: var(--accent);
+  color: white;
+}
+
+.skill-button-active {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.chat-input-field {
+  @apply flex-1 px-4 py-3 border rounded-lg placeholder-gray-500 focus:outline-none resize-none transition-all;
+  background-color: var(--bg);
+  color: var(--text);
+  border-color: var(--border);
+  min-height: 44px;
+  max-height: 120px;
+  font-family: inherit;
+}
+
+.chat-input-field:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(var(--accent-rgb), 0.1);
+}
+
+.chat-input-button {
+  @apply text-white font-semibold py-2 px-6 rounded-lg transition-colors;
+  background-color: var(--accent);
+  height: 44px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.chat-input-button:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.chat-input-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+
+.skill-badge-close {
+  @apply ml-1 cursor-pointer transition-opacity;
+  background: none;
+  border: none;
+  color: var(--accent);
+  padding: 0 4px;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.skill-badge-close:hover {
+  opacity: 1;
+}

@@ -1,0 +1,477 @@
+@reference "tailwindcss";
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.message {
+  @apply flex gap-3 max-w-full;
+  animation: fadeIn 0.3s ease-in;
+}
+
+.message.user {
+  @apply flex-row-reverse ml-auto;
+}
+
+.message-content {
+  @apply px-5 py-3 rounded-lg;
+}
+
+.message.bot .message-content {
+  @apply max-w-4xl;
+  background-color: var(--code-bg);
+  color: var(--text-h);
+}
+
+.message.user .message-content {
+  @apply max-w-xl;
+  background-color: var(--accent);
+  color: white;
+}
+
+.message-text {
+  @apply text-sm leading-relaxed text-base;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  line-height: 1.6;
+  letter-spacing: 0.3px;
+}
+
+.message-time {
+  @apply text-xs self-end mt-1;
+  color: var(--text);
+}
+
+.message.user .message-time {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.message-actions {
+  @apply flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity;
+}
+
+.message:hover .message-actions {
+  @apply opacity-100;
+}
+
+.action-button {
+  @apply text-xs px-2 py-1 rounded transition-colors cursor-pointer;
+  background-color: var(--border);
+  color: var(--text);
+}
+
+.action-button:hover {
+  opacity: 0.8;
+}
+
+.message.user .action-button {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Markdown paragraph styles */
+.message-text p {
+  margin: 8px 0;
+}
+
+/* Markdown header styles */
+.message-text h1,
+.message-text h2,
+.message-text h3,
+.message-text h4,
+.message-text h5,
+.message-text h6 {
+  margin: 16px 0 10px 0;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.message-text h1 {
+  @apply text-lg;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 8px;
+  margin: 0 0 16px 0;
+}
+
+.message-text h2 {
+  @apply text-base;
+  color: var(--accent);
+}
+
+.message-text h3 {
+  @apply text-sm;
+  opacity: 0.9;
+}
+
+/* Markdown list styles */
+.message-text ul,
+.message-text ol {
+  margin: 6px 0 6px 20px;
+}
+
+.message-text li {
+  margin: 4px 0;
+}
+
+/* Markdown bold/italic styles */
+.message-text strong {
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.message-text em {
+  font-style: italic;
+  opacity: 0.9;
+}
+
+/* Code styles */
+.message-text code {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.9em;
+  font-family: monospace;
+}
+
+/* Table styles */
+.message-text table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  font-size: 0.9em;
+}
+
+.message-text thead {
+  background-color: var(--accent);
+}
+
+.message-text th {
+  background-color: var(--accent);
+  color: white;
+  padding: 12px 14px;
+  text-align: left;
+  font-weight: 700;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  min-height: 40px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.message-text td {
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.message-text tr:last-child td {
+  border-bottom: none;
+}
+
+.message-text tr:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.message-text tbody tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.servicelinks-section {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  animation: fadeIn 0.5s ease-in;
+}
+
+.servicelinks-header {
+  font-size: 0.85em;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.servicelinks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.servicelink-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px 12px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  text-decoration: none;
+  color: var(--accent);
+  font-size: 0.9em;
+  transition: all 0.2s ease;
+}
+
+.servicelink-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: var(--accent);
+  transform: translateX(2px);
+}
+
+.servicelink-title {
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.servicelink-badges {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.servicelink-platform {
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 0.75em;
+  font-weight: 600;
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.servicelink-platform-azure {
+  background-color: rgba(59, 130, 246, 0.3);
+  color: #60a5fa;
+  border: 1px solid #3b82f6;
+}
+
+.servicelink-platform-aws {
+  background-color: rgba(239, 68, 68, 0.3);
+  color: #f87171;
+  border: 1px solid #ef4444;
+}
+
+.servicelink-category {
+  background-color: var(--accent);
+  color: var(--code-bg);
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 0.8em;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Related Pages Styling - h2 or strong header */
+.message-text > strong:has-text("Related Pages") {
+  margin-top: 24px;
+  padding-top: 16px;
+  display: block;
+  border-top: 2px solid var(--border);
+  color: var(--accent);
+  font-size: 0.95em;
+}
+
+/* Style the list under "Related Pages:" header */
+.message-text > ul:has(> li > a:not([href^="http"])) {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Related pages links - button-style with source badges at end */
+.message-text > ul > li > a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 8px 0 8px 12px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  border: 2px solid;
+  font-weight: 500;
+  margin: 4px 0;
+  height: 36px;
+  width: 100%;
+  overflow: hidden;
+  color: #374151;
+  border-color: #d1d5db;
+  background-color: #f9fafb;
+}
+
+.message-text > ul > li > a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Default badge for unrecognized link types */
+.message-text > ul > li > a::after {
+  content: "Link";
+  display: inline-block;
+  background-color: #6b7280;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 3px;
+  font-size: 0.65em;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-left: auto;
+  margin-right: 6px;
+  flex-shrink: 0;
+}
+
+.message-text > ul > li > a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Wiki links - Green background and border */
+.message-text > ul > li > a[href*="wiki.siemens.com"],
+.message-text > ul > li > a[href*="/wiki/"] {
+  color: #047857;
+  border-color: #10b981;
+  background-color: #ecfdf5;
+}
+
+.message-text > ul > li > a[href*="wiki.siemens.com"]::after,
+.message-text > ul > li > a[href*="/wiki/"]::after {
+  content: "WikiPage";
+  display: inline-block;
+  background-color: #10b981;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 3px;
+  font-size: 0.65em;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-left: auto;
+  margin-right: 6px;
+  flex-shrink: 0;
+}
+
+.message-text > ul > li > a[href*="wiki.siemens.com"]:hover,
+.message-text > ul > li > a[href*="/wiki/"]:hover {
+  color: #065f46;
+  border-color: #047857;
+  background-color: #d1fae5;
+}
+
+/* Confluence links - Blue background and border */
+.message-text > ul > li > a[href*="confluence"] {
+  color: #1e40af;
+  border-color: #3b82f6;
+  background-color: #eff6ff;
+}
+
+.message-text > ul > li > a[href*="confluence"]::after {
+  content: "Confluence";
+  display: inline-block;
+  background-color: #3b82f6;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 3px;
+  font-size: 0.65em;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-left: auto;
+  margin-right: 6px;
+  flex-shrink: 0;
+}
+
+.message-text > ul > li > a[href*="confluence"]:hover {
+  color: #1e3a8a;
+  border-color: #1e40af;
+  background-color: #dbeafe;
+}
+
+/* Docs/Learn links - Orange background and border */
+.message-text > ul > li > a[href*="learn.microsoft.com"],
+.message-text > ul > li > a[href*="/docs/"] {
+  color: #92400e;
+  border-color: #f59e0b;
+  background-color: #fffbeb;
+}
+
+.message-text > ul > li > a[href*="learn.microsoft.com"]::after,
+.message-text > ul > li > a[href*="/docs/"]::after {
+  content: "Docs";
+  display: inline-block;
+  background-color: #f59e0b;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 3px;
+  font-size: 0.65em;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-left: auto;
+  margin-right: 6px;
+  flex-shrink: 0;
+}
+
+.message-text > ul > li > a[href*="learn.microsoft.com"]:hover,
+.message-text > ul > li > a[href*="/docs/"]:hover {
+  color: #78350f;
+  border-color: #d97706;
+  background-color: #fef3c7;
+}
+
+/* SharePoint/Sway links - Purple background and border */
+.message-text > ul > li > a[href*="sharepoint"],
+.message-text > ul > li > a[href*="sway"],
+.message-text > ul > li > a[href*="microsoft.com/"] {
+  color: #6b21a8;
+  border-color: #a855f7;
+  background-color: #faf5ff;
+}
+
+.message-text > ul > li > a[href*="sharepoint"]::after,
+.message-text > ul > li > a[href*="sway"]::after,
+.message-text > ul > li > a[href*="microsoft.com/"]::after {
+  content: "SharePoint";
+  display: inline-block;
+  background-color: #a855f7;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 3px;
+  font-size: 0.65em;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-left: auto;
+  margin-right: 6px;
+  flex-shrink: 0;
+}
+
+.message-text > ul > li > a[href*="sharepoint"]:hover,
+.message-text > ul > li > a[href*="sway"]:hover,
+.message-text > ul > li > a[href*="microsoft.com/"]:hover {
+  color: #581c87;
+  border-color: #7c3aed;
+  background-color: #f3e8ff;
+}
+
+/* Badge styling for source indicators */
+.message-text > ul > li > a::before {
+  content: attr(data-icon);
+  font-size: 1.2em;
+  min-width: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Remove bullet points from Related Pages list */
+.message-text > ul > li:has(> a:not([href^="http"]))::marker {
+  content: "";
+}

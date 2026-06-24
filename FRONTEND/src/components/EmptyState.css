@@ -1,0 +1,37 @@
+@reference "tailwindcss";
+
+.empty-state {
+  @apply flex-1 flex flex-col items-center justify-center text-center px-4 py-12;
+}
+
+.empty-state-icon {
+  @apply text-6xl mb-8;
+}
+
+.empty-state-title {
+  @apply text-4xl font-light mb-12;
+  color: var(--text-h);
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.empty-state-actions {
+  @apply flex flex-wrap gap-4 justify-center;
+  max-width: 600px;
+}
+
+.empty-state-button {
+  @apply inline-flex items-center gap-3 px-6 py-3 rounded-lg border transition-colors text-sm font-medium;
+  color: var(--text-h);
+  border-color: var(--border);
+}
+
+.empty-state-button:hover {
+  background-color: var(--code-bg);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.empty-state-button-icon {
+  @apply text-xl;
+}

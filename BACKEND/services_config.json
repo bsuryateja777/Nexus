@@ -1,0 +1,256 @@
+{
+  "services": [
+    {
+      "id": "ai-attack",
+      "name": "AI Attack",
+      "aliases": ["ai attack", "aiattack", "ai-attack"],
+      "category": "ai-security",
+      "description": "AI security and attack detection platform",
+      "wiki_docs": {
+        "Ai Attack Azure - user roles.pdf": "https://wiki.company.com/ai-attack/user-roles",
+        "ai-attack-infrastructure.pdf": "https://wiki.company.com/ai-attack/architecture",
+        "Developer-Packages.pdf": "https://wiki.company.com/ai-attack/developer-packages"
+      }
+    },
+    {
+      "id": "ai_attack_aws",
+      "name": "AI Attack - AWS",
+      "aliases": ["ai attack aws", "ai-attack-aws", "aiattack aws"],
+      "category": "ai-security",
+      "description": "AI Attack service deployed on AWS infrastructure"
+    },
+    {
+      "id": "data_product_sharing",
+      "name": "Data Product Sharing",
+      "aliases": ["data sharing", "data product", "dps"],
+      "category": "data-integration",
+      "description": "Platform for sharing data products across the organization"
+    },
+    {
+      "id": "erp_data_ingest",
+      "name": "ERP Data Ingest",
+      "aliases": ["erp ingest", "erp data", "erp"],
+      "category": "data-integration",
+      "description": "Service for ingesting ERP system data"
+    },
+    {
+      "id": "neo4j",
+      "name": "NEO4J",
+      "aliases": ["neo4j", "neo", "graph database"],
+      "category": "database",
+      "description": "Graph database platform for relationship data management"
+    },
+    {
+      "id": "power_bi",
+      "name": "Power BI",
+      "aliases": ["power bi", "powerbi", "pbi"],
+      "category": "analytics",
+      "description": "Microsoft Power BI analytics and visualization platform"
+    },
+    {
+      "id": "qlik",
+      "name": "Qlik",
+      "aliases": ["qlik", "qlikview", "qliksense"],
+      "category": "analytics",
+      "description": "Qlik analytics and business intelligence platform"
+    },
+    {
+      "id": "siemens_gpt",
+      "name": "Siemens GPT",
+      "aliases": ["siemens gpt", "siemens-gpt", "sgpt"],
+      "category": "ai-llm",
+      "description": "Siemens proprietary generative AI platform"
+    },
+    {
+      "id": "snowflake",
+      "name": "Snowflake",
+      "aliases": ["snowflake", "snow"],
+      "category": "data-warehouse",
+      "description": "Cloud-native data warehouse platform"
+    },
+    {
+      "id": "tableau",
+      "name": "Tableau",
+      "aliases": ["tableau"],
+      "category": "analytics",
+      "description": "Tableau visualization and analytics platform"
+    },
+    {
+      "id": "data_governance",
+      "name": "Data Governance Platform",
+      "aliases": ["data governance", "governance platform", "dgp"],
+      "category": "governance",
+      "description": "Platform for managing data governance and compliance"
+    },
+    {
+      "id": "sdc_marketplace",
+      "name": "SDC Marketplace",
+      "aliases": ["sdc marketplace", "marketplace", "sdcm"],
+      "category": "data-platform",
+      "description": "Siemens Data & AI Cloud marketplace for data products"
+    },
+    {
+      "id": "sdc_lake",
+      "name": "SDC Lake",
+      "aliases": ["sdc lake", "sdclake"],
+      "category": "data-platform",
+      "description": "Siemens Data & AI Cloud data lake service"
+    },
+    {
+      "id": "sdc_projects",
+      "name": "Siemens Data & AI Cloud (SDC) Projects",
+      "aliases": ["sdc projects", "siemens data ai cloud", "sdc"],
+      "category": "data-platform",
+      "description": "Project management service within Siemens Data & AI Cloud"
+    },
+    {
+      "id": "snaplogic",
+      "name": "Snaplogic",
+      "aliases": ["snaplogic", "snap logic"],
+      "category": "integration",
+      "description": "Integration platform for connecting cloud and on-premises systems"
+    },
+    {
+      "id": "sdc_orchestration",
+      "name": "SDC Orchestration (Airflow)",
+      "aliases": ["sdc orchestration", "airflow", "orchestration"],
+      "category": "data-platform",
+      "description": "Workflow orchestration service using Apache Airflow"
+    },
+    {
+      "id": "datadog",
+      "name": "Datadog",
+      "aliases": ["datadog", "monitoring"],
+      "category": "monitoring",
+      "description": "Cloud monitoring and analytics platform"
+    },
+    {
+      "id": "sac",
+      "name": "SAC",
+      "aliases": ["sac", "analytics cloud"],
+      "category": "analytics",
+      "description": "SAP Analytics Cloud platform"
+    },
+    {
+      "id": "datalake2go",
+      "name": "Datalake2GO",
+      "aliases": ["datalake2go", "dl2go"],
+      "category": "data-platform",
+      "description": "Ready-to-use data lake platform"
+    },
+    {
+      "id": "sdc_pulse",
+      "name": "SDC Pulse",
+      "aliases": ["sdc pulse", "pulse"],
+      "category": "data-platform",
+      "description": "Real-time monitoring and insights service for SDC"
+    },
+    {
+      "id": "dbt_cloud",
+      "name": "DBT Cloud",
+      "aliases": ["dbt cloud", "dbt", "data build tool"],
+      "category": "data-engineering",
+      "description": "Data transformation and modeling platform"
+    },
+    {
+      "id": "sdc_altair_ai",
+      "name": "SDC Altair AI Cloud",
+      "aliases": ["sdc altair", "altair ai", "altair"],
+      "category": "data-platform",
+      "description": "AI modeling and simulation capabilities on SDC"
+    },
+    {
+      "id": "altair_graph_studio",
+      "name": "Altair Graph Studio",
+      "aliases": ["altair graph", "graph studio"],
+      "category": "analytics",
+      "description": "Graph analysis and visualization studio"
+    },
+    {
+      "id": "platform_openai",
+      "name": "[Platform] OpenAI",
+      "aliases": ["openai", "chatgpt", "gpt"],
+      "category": "ai-llm",
+      "description": "OpenAI GPT-based language models and services"
+    },
+    {
+      "id": "platform_bw4hana",
+      "name": "[Platform] BW4HANA (F1P)",
+      "aliases": ["bw4hana", "bw/4hana", "f1p"],
+      "category": "data-warehouse",
+      "description": "SAP BW4HANA data warehouse and analytics platform"
+    },
+    {
+      "id": "platform_celonis",
+      "name": "[Platform] Celonis",
+      "aliases": ["celonis", "process mining"],
+      "category": "analytics",
+      "description": "Process mining and analytics platform"
+    },
+    {
+      "id": "platform_talend",
+      "name": "[Platform] Talend",
+      "aliases": ["talend", "etl"],
+      "category": "integration",
+      "description": "Data integration and ETL platform"
+    },
+    {
+      "id": "platform_sdc_streaming",
+      "name": "[Platform] SDC Streaming",
+      "aliases": ["sdc streaming", "streaming"],
+      "category": "data-platform",
+      "description": "Real-time data streaming service on SDC"
+    },
+    {
+      "id": "platform_alteryx",
+      "name": "[Platform] Alteryx",
+      "aliases": ["alteryx"],
+      "category": "data-analytics",
+      "description": "Automated analytics and data science platform"
+    },
+    {
+      "id": "platform_knime",
+      "name": "[Platform] Knime Business Hub",
+      "aliases": ["knime", "knime hub"],
+      "category": "data-analytics",
+      "description": "KNIME analytics and machine learning platform"
+    },
+    {
+      "id": "service_common_data",
+      "name": "[Service] Common Data",
+      "aliases": ["common data", "commondata"],
+      "category": "data-platform",
+      "description": "Shared common data repository and services"
+    },
+    {
+      "id": "platform_xds",
+      "name": "[Platform] xDS: Cross-Account Data Sharing",
+      "aliases": ["xds", "cross-account", "data sharing"],
+      "category": "data-integration",
+      "description": "Cross-account data sharing platform"
+    },
+    {
+      "id": "service_uniorgdb",
+      "name": "[Service] Uniorgdb",
+      "aliases": ["uniorgdb", "uniorgan db"],
+      "category": "database",
+      "description": "Unified organization database service"
+    },
+    {
+      "id": "arize_ai",
+      "name": "ARIZE_AI",
+      "aliases": ["arize", "arize ai", "model monitoring"],
+      "category": "ml-ops",
+      "description": "Machine learning model monitoring and observability platform"
+    },
+    {
+      "id": "gemini_enterprise",
+      "name": "GEMINI_ENTERPRISE & LLM_GATEWAY",
+      "aliases": ["gemini", "gemini enterprise", "llm gateway"],
+      "category": "ai-llm",
+      "description": "Enterprise LLM gateway and Gemini services"
+    }
+  ],
+  "total_services": 35,
+  "note": "Complete service configuration for 35 Siemens data and AI platform services. Each service includes aliases for intelligent routing."
+}

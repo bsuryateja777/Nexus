@@ -1,0 +1,74 @@
+@reference "tailwindcss";
+
+.user-profile {
+  @apply relative flex items-center gap-3 w-full;
+}
+
+.user-profile.collapsed {
+  @apply justify-center;
+}
+
+.user-avatar {
+  @apply w-10 h-10 rounded-full flex items-center justify-center cursor-pointer transition-colors font-semibold text-lg flex-shrink-0;
+  background-color: var(--code-bg);
+  color: var(--text-h);
+}
+
+.user-avatar:hover {
+  opacity: 0.8;
+}
+
+.user-info {
+  @apply flex-1 min-w-0 cursor-pointer;
+}
+
+.user-name {
+  @apply text-sm font-semibold truncate;
+  color: var(--text-h);
+}
+
+.user-email {
+  @apply text-xs truncate;
+  color: var(--text);
+  opacity: 0.6;
+}
+
+.user-dropdown {
+  @apply absolute bottom-full right-0 mb-2 w-48 border rounded-lg shadow-lg py-2 z-50;
+  background-color: var(--bg);
+  border-color: var(--border);
+}
+
+.user-dropdown-item {
+  @apply block w-full text-left px-4 py-2 transition-colors;
+  color: var(--text);
+}
+
+.user-dropdown-item:hover {
+  background-color: var(--code-bg);
+}
+
+.user-dropdown-divider {
+  @apply border-t my-2;
+  border-color: var(--border);
+}
+
+.user-dropdown-header {
+  @apply px-4 py-2 text-sm font-semibold border-b;
+  color: var(--text-h);
+  border-color: var(--border);
+}
+
+.user-dropdown-email {
+  @apply text-xs;
+  color: var(--text);
+  opacity: 0.6;
+}
+
+.user-dropdown-logout {
+  color: #ef4444;
+}
+
+.user-dropdown-logout:hover {
+  background-color: rgba(239, 68, 68, 0.1);
+}
