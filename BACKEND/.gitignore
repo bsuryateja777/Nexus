@@ -1,4 +1,5 @@
 # Environment Variables (Secrets Only)
+.env
 .env.local
 .env.*.local
 
